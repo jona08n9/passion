@@ -4,6 +4,14 @@
   list-style: none;
   text-decoration: none;
   font-size: 16px;
+
+  --bg-color: #eae2de;
+  --green-color: #afac99;
+  --grey-color: EBEBEB;
+}
+
+body {
+  background-color: var(--bg-color);
 }
 
 /* 
