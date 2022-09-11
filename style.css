@@ -7,10 +7,15 @@
 
   --pink-col: #eae2de;
   --green-col: #afac99;
-  --grey-col: EBEBEB;
+  --grey-col: #ebebeb;
+  --trans: all 200ms ease-in-out;
 }
 
-/* --- BASIC --- */
+.hide {
+  display: none;
+}
+
+/* - - - BASIC - - - */
 
 h1,
 h2,
@@ -42,6 +47,7 @@ a {
   font-weight: 700;
   font-style: normal;
   color: #000;
+  transition: var(--trans);
 }
 
 a:hover,
@@ -51,31 +57,9 @@ a:focus,
 .nav--link:focus,
 .nav--link:active {
   text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* --- HEADER ---*/
-
-header {
-  display: grid;
-}
-
-#headerLogo {
-  width: 200px;
-  place-self: start center;
-  margin-block: 20px 40px;
-}
-
-header nav {
-  display: none;
-}
-
-.nav--link {
-  font-family: linotype-didot-headline, serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.1rem;
-  text-transform: uppercase;
+  text-underline-offset: 4px;
+  cursor: pointer;
+  transition: var(--trans);
 }
 
 body {
@@ -84,6 +68,117 @@ body {
 
 footer {
   background-color: var(--green-col);
+}
+
+/* - - - HEADER - - -*/
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  max-height: 170px;
+  margin-bottom: 20px;
+  transition: var(--trans);
+}
+
+.resp #header__logo {
+  width: 200px;
+  grid-column: 2 / 3;
+  place-self: start center;
+  margin-block-start: 20px;
+  transition: var(--trans);
+}
+
+.burger {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  place-self: end center;
+  transition: var(--trans);
+}
+
+.nav--link {
+  font-family: linotype-didot-headline, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: var(--trans);
+}
+
+.burger {
+  transition: var(--trans);
+}
+
+.burger img {
+  width: 30px;
+}
+
+.responsive__menu {
+  position: fixed;
+  transform: translateY(-100%);
+  top: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 30px;
+  width: 50%;
+  padding-block: 20px;
+  padding-inline-start: 20px;
+  background-color: var(--grey-col);
+  list-style: none;
+  border: 1px solid var(--green-col);
+  z-index: 50;
+  transition: var(--trans);
+}
+
+.nav--link::after {
+  position: absolute;
+  content: "";
+  background-image: url(https://api.iconify.design/material-symbols:arrow-forward-ios-rounded.svg);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  border: none;
+  width: 12px;
+  height: 15px;
+  margin: 0;
+  right: 0.75rem;
+}
+
+/* - - - MAIN - - - */
+
+main {
+  max-width: 1200px;
+}
+
+@media screen and (min-width: 768px) {
+  /* - - - HEADER - - -*/
+  .nav--link::after {
+    content: none;
+  }
+
+  /* REMOVE responsive__menu*/
+
+  #header__logo {
+    width: 200px;
+    grid-column: 2 / 3;
+    place-self: start center;
+    margin-block: 20px 15px;
+  }
+
+  nav {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    place-self: center center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  nav p {
+    padding-bottom: 5px;
+  }
 }
 
 /* 
