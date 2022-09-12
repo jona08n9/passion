@@ -140,11 +140,17 @@ header {
 
 /* - - - MAIN - - - */
 
-/* - - - FOOTER - - - */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 main {
   max-width: 1200px;
 }
+
+/* - - - FOOTER - - - */
 
 @media screen and (min-width: 768px) {
   /* - - - HEADER - - -*/
@@ -175,26 +181,51 @@ main {
   nav p {
     padding-bottom: 5px;
   }
-}
 
-/* 
-button {
-  border: 1px solid #afac99;
-  color: #000;
-  background-color: #fff;
-  padding: 8px 40px;
-  font-size: 2rem;
-  font-family: minion-pro, serif;
-  font-weight: 700;
-  font-style: italic;
-  transition: all 175ms ease-in-out;
-  border-radius: 5px;
-}
+  /* - - - MAIN - - - */
 
-button:hover {
-  color: #fff;
-  background-color: #afac99;
-} */
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1280px;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .splash {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .splash img {
+    width: 100%;
+    height: auto;
+  }
+
+  .splash h2 {
+    color: #fff;
+    position: absolute;
+    text-transform: uppercase;
+    text-shadow: 1px 1px #000;
+  }
+
+  .splash .splash_title1 {
+    font-size: 3rem;
+    font-family: linotype-didot, serif;
+    font-weight: 400;
+    font-style: italic;
+    top: 20%;
+    left: 22%;
+  }
+  .splash .splash_title2 {
+    font-size: 4.5rem;
+    top: 28%;
+    left: 35%;
+  }
+}
 
 /*FONTE
 DIDOT:
