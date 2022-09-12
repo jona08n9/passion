@@ -69,6 +69,36 @@ body {
 footer {
   background-color: var(--green-col);
 }
+.footer_container_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+  line-height: 1.5;
+  opacity: 70%;
+  color: white;
+  margin: 2rem;
+}
+
+.icon {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  max-width: 90px;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-top: 20px;
+}
+
+.højre_col,
+.venstre_col {
+  place-self: center center;
+}
+
+.copyright {
+  text-align: center;
+  color: white;
+  margin: 1rem;
+}
 
 /* - - - HEADER - - -*/
 
