@@ -1,3 +1,5 @@
+// RESPONSIVE MENU -- START
+
 const menuOpen = document.querySelector(".menu_icon");
 const menuClose = document.querySelector(".close_icon");
 const header = document.querySelector("header");
@@ -13,21 +15,20 @@ window.addEventListener("resize", addResp);
 function addResp() {
   if (window.matchMedia("(min-width:768px)").matches) {
     console.log("vinduet er > 768px");
-    menuOpen.removeEventListener("click", openRespMenu);
     header.classList.remove("resp");
-    navBar.classList.add("shown");
+    navBar.classList.remove("hard-hide");
     navBar.classList.remove("responsive__menu");
-    burgerIcons.classList.add("hide");
-    navBarLine1.classList.remove("hide");
-    navBarLine2.classList.remove("hide");
+    burgerIcons.classList.add("hard-hide");
+    navBarLine1.classList.remove("hard-hide");
+    navBarLine2.classList.remove("hard-hide");
   } else {
     console.log("vinduet er < 768px");
     header.classList.add("resp");
-    navBar.classList.remove("shown");
+    navBar.classList.add("hard-hide");
     navBar.classList.add("responsive__menu");
-    burgerIcons.classList.remove("hide2");
-    navBarLine1.classList.add("hide");
-    navBarLine2.classList.add("hide");
+    burgerIcons.classList.remove("hard-hide");
+    navBarLine1.classList.add("hard-hide");
+    navBarLine2.classList.add("hard-hide");
     menuOpen.addEventListener("click", openRespMenu);
   }
 }
@@ -35,22 +36,20 @@ function addResp() {
 function openRespMenu() {
   console.log("Open Menu");
 
-  navBar.classList.add("show");
-  menuClose.classList.remove("hide2");
-  menuClose.classList.add("show");
-  menuOpen.classList.add("hide2");
+  navBar.classList.remove("hard-hide");
+  navBar.classList.remove("hide");
+  menuClose.classList.remove("hard-hide");
+  menuOpen.classList.add("hard-hide");
   menuClose.addEventListener("click", closeRespMenu);
 }
 
 function closeRespMenu() {
   console.log("Close Menu");
 
-  navBar.classList.remove("show");
-  menuClose.classList.remove("show");
-  menuClose.classList.add("hide2");
-  menuOpen.classList.remove("hide2");
-  menuOpen.classList.add("show");
+  navBar.classList.add("hide");
+  menuClose.classList.add("hard-hide");
+  menuOpen.classList.remove("hard-hide");
   menuOpen.addEventListener("click", openRespMenu);
 }
 
-// function openMenu() {}
+// RESPONSIVE MENU -- END

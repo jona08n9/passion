@@ -9,16 +9,11 @@
   --green-col: #afac99;
   --grey-col: #ebebeb;
 }
-
-.hide2 {
-  opacity: 0 !important;
-  display: none;
-}
-.show {
-  opacity: 1 !important;
+.hard-hide {
+  display: none !important;
 }
 .hide {
-  display: none !important;
+  opacity: 0;
 }
 /* - - - BASIC - - - */
 
@@ -126,8 +121,7 @@ header {
   background-color: var(--grey-col);
   list-style: none;
   border: 1px solid var(--green-col);
-  z-index: 1;
-  opacity: 0;
+  transition: all 200ms ease-in-out;
 }
 .nav--link::after {
   position: absolute;
@@ -142,10 +136,6 @@ header {
   margin: 0;
   right: 0.75rem;
   transition: all 200ms ease-in-out;
-}
-
-.show {
-  opacity: 1 !important;
 }
 
 /* - - - MAIN - - - */
@@ -165,7 +155,7 @@ main {
   /* REMOVE responsive__menu*/
 
   #header__logo {
-    width: 200px;
+    width: 250px;
     grid-column: 2 / 3;
     place-self: start center;
     margin-block: 20px 15px;
