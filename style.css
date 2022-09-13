@@ -361,7 +361,7 @@ info_box_large-text h4 {
   }
 
   .info_box {
-    margin-block: -50px 50px;
+    margin-block: -70px 50px;
     padding: 20px 40px;
     width: 75%;
     margin-inline: auto;
@@ -379,7 +379,7 @@ info_box_large-text h4 {
   }
 
   .info_box_large-image {
-    grid-column: 1 / 8;
+    grid-column: 1 / 6;
     grid-row: 2 / 12;
   }
 
@@ -411,7 +411,7 @@ info_box_large-text h4 {
   }
 
   .info_box {
-    width: 90%;
+    width: 93%;
   }
 
   .front_display_grid {
@@ -419,8 +419,16 @@ info_box_large-text h4 {
   }
 
   .info_box_large {
-    max-height: 1000px;
-    max-width: 1200px;
+    max-height: 600px;
+    max-width: 1280px;
+  }
+
+  .info_box_large-text h2 {
+    margin-bottom: 30px;
+  }
+
+  .info_box_large-text h4 {
+    padding: 0 30px;
   }
 }
 
@@ -474,8 +482,3 @@ font-family: minion-pro,serif;
 font-weight: 400;
 font-style: normal;
 */
-
-.info_box_large-image {
-  grid-column: 1 / 8;
-  grid-row: 2 / 12;
-}
