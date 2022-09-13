@@ -179,19 +179,22 @@ header {
 /* - - - MAIN - - - */
 
 /* - - - SPLASH - - -*/
-.splash {
+.splash,
+.product_splash {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
 }
 
-.splash img {
+.splash img,
+.product_splash img {
   width: 100%;
   height: auto;
 }
 
-.splash h2 {
+.splash h2,
+.product_splash h2 {
   color: #fff;
   position: absolute;
   text-transform: uppercase;
