@@ -15,6 +15,13 @@
 .hide {
   opacity: 0;
 }
+
+.test {
+  background-color: red;
+  width: calc(100% - 15px);
+  height: 200px;
+  place-self: center center;
+}
 /* - - - BASIC - - - */
 
 h1,
@@ -26,6 +33,7 @@ h4 {
   font-style: normal;
   font-size: 1.96rem;
 }
+
 h2 {
   font-size: 1.6rem;
 }
@@ -170,6 +178,40 @@ header {
 
 /* - - - MAIN - - - */
 
+/* - - - SPLASH - - -*/
+.splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.splash img {
+  width: 100%;
+  height: auto;
+}
+
+.splash h2 {
+  color: #fff;
+  position: absolute;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #000;
+}
+
+.splash .splash_title1 {
+  font-size: 2rem;
+  font-family: linotype-didot, serif;
+  font-weight: 400;
+  font-style: italic;
+  top: 15%;
+  left: 18%;
+}
+.splash .splash_title2 {
+  font-size: 3rem;
+  top: 25%;
+  left: 30%;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -177,7 +219,91 @@ body {
 }
 
 main {
-  max-width: 1200px;
+  padding-bottom: 40px;
+}
+
+/* Info box design - Over billede */
+.info_box {
+  margin-block: 50px;
+  padding-block: 20px;
+  background-color: var(--grey-col);
+  width: 100%;
+  text-align: center;
+}
+
+.info_box h2,
+.info_box_large-text h2 {
+  display: inline-block;
+  font-family: linotype-didot-headline, serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #000;
+}
+
+.info_box h3,
+info_box_large-text h4 {
+  font-family: linotype-didot, serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 40px;
+  padding-inline: 20px;
+  max-width: 65ch;
+  margin-inline: auto;
+  line-height: 1.4em;
+}
+
+.front_display_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.info_box_large {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  max-height: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  margin-block: 30px;
+}
+
+.info_box_large-image {
+  grid-column: 1 / 7;
+  grid-row: 1 / 13;
+  width: 100%;
+  height: 100%;
+}
+
+.info_box_large-image img {
+  width: 100%;
+  height: auto;
+}
+.info_box_large-text {
+  grid-column: 7 / 13;
+  grid-row: 1 / 13;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--grey-col);
+}
+
+.info_box_large-text h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.info_box_large-text h4 {
+  font-size: 1rem;
+  padding: 0 20px 15px;
 }
 
 /* - - - FOOTER - - - */
@@ -218,35 +344,13 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1280px;
+    max-width: 900px;
     text-align: center;
     margin-inline: auto;
   }
 
-  .splash {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-  }
-
-  .splash img {
-    width: 100%;
-    height: auto;
-  }
-
-  .splash h2 {
-    color: #fff;
-    position: absolute;
-    text-transform: uppercase;
-    text-shadow: 1px 1px #000;
-  }
-
   .splash .splash_title1 {
     font-size: 3rem;
-    font-family: linotype-didot, serif;
-    font-weight: 400;
-    font-style: italic;
     top: 20%;
     left: 22%;
   }
@@ -254,6 +358,69 @@ main {
     font-size: 4.5rem;
     top: 28%;
     left: 35%;
+  }
+
+  .info_box {
+    margin-block: -50px 50px;
+    padding: 20px 40px;
+    width: 75%;
+    margin-inline: auto;
+    z-index: 2;
+    box-shadow: 3px 3px 5px rgb(117, 112, 112);
+  }
+
+  .front_display_grid {
+    gap: 20px;
+  }
+
+  .info_box_large {
+    max-height: 800px;
+    max-width: 900px;
+  }
+
+  .info_box_large-image {
+    grid-column: 1 / 8;
+    grid-row: 2 / 12;
+  }
+
+  .info_box_large-text {
+    grid-column: 6 / 13;
+    box-shadow: 3px 3px 5px rgb(117, 112, 112);
+  }
+
+  .info_box_large-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .info_box_large-text h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .test {
+    height: 400px;
+  }
+
+  main {
+    max-width: 1280px;
+  }
+
+  .splash {
+    width: 100%;
+  }
+
+  .info_box {
+    width: 90%;
+  }
+
+  .front_display_grid {
+    max-width: 1280px;
+  }
+
+  .info_box_large {
+    max-height: 1000px;
+    max-width: 1200px;
   }
 }
 
@@ -307,3 +474,8 @@ font-family: minion-pro,serif;
 font-weight: 400;
 font-style: normal;
 */
+
+.info_box_large-image {
+  grid-column: 1 / 8;
+  grid-row: 2 / 12;
+}
