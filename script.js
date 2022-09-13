@@ -5,7 +5,6 @@ const menuClose = document.querySelector(".close_icon");
 const header = document.querySelector("header");
 const navBar = document.querySelector("nav");
 const navBarLine1 = document.querySelector(".nav--line1");
-const navBarLine2 = document.querySelector(".nav--line2");
 const burgerIcons = document.querySelector(".burger");
 
 // menuOpen.addEventListener(click, "openMenu");
@@ -20,7 +19,6 @@ function addResp() {
     navBar.classList.remove("responsive__menu");
     burgerIcons.classList.add("hard-hide");
     navBarLine1.classList.remove("hard-hide");
-    navBarLine2.classList.remove("hard-hide");
   } else {
     console.log("vinduet er < 768px");
     header.classList.add("resp");
@@ -28,7 +26,6 @@ function addResp() {
     navBar.classList.add("responsive__menu");
     burgerIcons.classList.remove("hard-hide");
     navBarLine1.classList.add("hard-hide");
-    navBarLine2.classList.add("hard-hide");
     menuOpen.addEventListener("click", openRespMenu);
   }
 }

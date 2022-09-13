@@ -74,40 +74,6 @@ body {
   background-color: var(--pink-col);
 }
 
-footer {
-  background-color: var(--green-col);
-}
-.footer_container_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  text-align: left;
-  line-height: 1.5;
-  opacity: 70%;
-  color: white;
-  margin: 2rem;
-}
-
-.icon {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 15px;
-  max-width: 90px;
-  margin: 0 auto;
-  margin-top: 0px;
-  margin-top: 20px;
-}
-
-.højre_col,
-.venstre_col {
-  place-self: center center;
-}
-
-.copyright {
-  text-align: center;
-  color: white;
-  margin: 1rem;
-}
-
 /* - - - HEADER - - -*/
 
 header {
@@ -118,12 +84,16 @@ header {
   transition: all 200ms ease-in-out;
 }
 
-.resp #header__logo {
-  width: 200px;
+.resp a,
+header > a {
   grid-column: 2 / 3;
   place-self: start center;
   margin-block-start: 20px;
   transition: all 200ms ease-in-out;
+}
+
+#header__logo {
+  width: 200px;
 }
 
 .burger {
@@ -140,6 +110,7 @@ header {
   font-size: 1.1rem;
   text-transform: uppercase;
   transition: all 200ms ease-in-out;
+  padding-inline: 30px;
 }
 
 .burger img {
@@ -147,8 +118,8 @@ header {
 }
 
 .resp .responsive__menu {
-  position: fixed;
-  top: 12%;
+  position: absolute;
+  top: 121.15px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -160,6 +131,7 @@ header {
   list-style: none;
   border: 1px solid var(--green-col);
   transition: all 200ms ease-in-out;
+  z-index: 5;
 }
 .nav--link::after {
   position: absolute;
@@ -311,6 +283,40 @@ info_box_large-text h4 {
 
 /* - - - FOOTER - - - */
 
+footer {
+  background-color: var(--green-col);
+}
+.footer_container_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+  line-height: 1.5;
+  opacity: 70%;
+  color: white;
+  margin: 2rem;
+}
+
+.icon {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  max-width: 90px;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-top: 20px;
+}
+
+.højre_col,
+.venstre_col {
+  place-self: center center;
+}
+
+.copyright {
+  text-align: center;
+  color: white;
+  margin: 1rem;
+}
+
 @media screen and (min-width: 768px) {
   /* - - - HEADER - - -*/
   .nav--link::after {
@@ -321,9 +327,6 @@ info_box_large-text h4 {
 
   #header__logo {
     width: 250px;
-    grid-column: 2 / 3;
-    place-self: start center;
-    margin-block: 20px 15px;
   }
 
   nav {

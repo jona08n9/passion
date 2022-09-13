@@ -14,13 +14,13 @@
   <!-- hej -->
   <body>
     <header>
+      <a href="index.html">
       <img id="header__logo" src="images/logo.png" alt="Logo" />
+      </a>
       <nav>
-        <a class="nav--link">Alle Produkter</a>
+        <a class="nav--link" href="/products.html">Alle Produkter</a>
         <p class="nav--line1">|</p>
-        <a class="nav--link">Serier</a>
-        <p class="nav--line2">|</p>
-        <a class="nav--link">Om COZY</a>
+        <a class="nav--link" href="/about.html">Om COZY</a>
       </nav>
       <div class="burger">
         <img class="menu_icon" src="https://api.iconify.design/ri:menu-2-fill.svg" alt="menu icon" />
@@ -31,54 +31,36 @@
       <h2 class="splash_title1">All our products</h2>
     </div>
     <main>
+      <div class="info_box">
       <h1>Se vores produkter under her</h1>
-      <h3>Filtrer mellem vores varer og find præcis det produkt der passer til dig!</h3>
+      <h2>Filtrer mellem vores varer og find præcis det produkt der passer til dig!</h3>
+      </div>
       <div class="nav-single">
         <button data-product="all" id="all" class="valgt">Alle varer</button>
         <p>|</p>
-        <button data-product="Nordic" id="nordic" class="valgt">Nordic</button>
+        <button data-product="Nordic" id="nordic" class="">Nordic</button>
         <p>|</p>
-        <button data-product="Organic" id="organic" class="valgt">Organic</button>
+        <button data-product="Organic" id="organic" class="">Organic</button>
         <p>|</p>
-        <button data-product="Luxe" id="luxe" class="valgt">Luxe</button>
+        <button data-product="Luxe" id="luxe" class="">Luxe</button>
         <p>|</p>
-        <button data-product="Crisp" id="crisp" class="valgt">Crisp</button>
-        <!-- <div class="filter-box">
-          <h4>Størrelser</h4>
-          <ul>
-            <li><button data-dish="alle" id="all" class="valgt">200 x 220 cm</button></li>
-            <li><button data-dish="alle" id="all" class="valgt">140 x 220 cm</button></li>
-            <li><button data-dish="alle" id="all" class="valgt">60 x 65 cm</button></li>
-          </ul>
-        </div>
-        <div class="filter-box">
-          <h4>Materiale</h4>
-          <ul>
-            <li><button data-dish="alle" id="all" class="valgt">Bommuld</button></li>
-            <li><button data-dish="alle" id="all" class="valgt">Silke</button></li>
-          </ul>
-        </div> -->
-        <!-- <button data-dish="forretter" id="starters">Forretter</button>
-        <button data-dish="hovedretter" id="main_course">Hovedretter</button>
-        <button data-dish="desserter" id="dessert">Desserter</button>
-        <button data-dish="sideorders" id="sideorder">Tilbehør</button>
-        <button data-dish="drikkevarer" id="drinks">Drikkevarer</button> -->
+        <button data-product="Crisp" id="crisp" class="">Crisp</button>
       </div>
-      <h2 class="header1">Alle varer</h2>
+      <h2 id="filter">Nuværende filtrering: <span class="header1">Alle varer</span></h2>
       <div id="main"></div>
       <template>
         <article id="product">
           <img id="image" class="imageMain" src="" alt="" />
           <div class="grid_1_1">
-            <div class="grid_cont">
+            <div class="grid_cont1">
               <h4 id="series_name"></h4>
               <h2 id="name"></h2>
               <p>
                 <b><span id="size"></span></b>
               </p>
             </div>
-            <div class="grid_cont">
-            <h3>Pris: <span id="price"></span></h3>
+            <div class="grid_cont2">
+            <h3 id="price"></h3>
           </div>
         </article>
       </template>
