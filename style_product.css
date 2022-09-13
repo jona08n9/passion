@@ -1,3 +1,9 @@
+* {
+  --pink-col: #eae2de;
+  --green-col: #afac99;
+  --grey-col: #ebebeb;
+}
+
 .product_splash {
   background-image: url(images/splash_single.webp);
   width: 100%;

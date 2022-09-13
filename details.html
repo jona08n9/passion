@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="d_style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/pgn0pca.css" />
     <link rel="stylesheet" href="https://use.typekit.net/pgn0pca.css" />
     <title>COZY.dk</title>
@@ -26,33 +27,29 @@
         <img class="close_icon hard-hide" src="https://api.iconify.design/ri:close-fill.svg" alt="close menu icon" />
       </div>
     </header>
-      <div class="splash">
-        <img src="/images/splash1920x1280.webp" alt="splash image" />
-        <h2 class="splash_title1">Your Perfect</h2>
-        <h2 class="splash_title2">Match</h2>
-      </div>
+    <div id="close">
+      <img src="images/arrow_right.png">
+      <p>Gå tilbage</p>
+    </div>
       <main>
-      <div class="info_box">
-        <h2>PIFT SOVE VÆRELSET OP</h2>
-        <h3>Hos COZY har vi et bredt sortiment af forskellige sengesæt i flotte farver, mange størrelser, lækkert materiale og i god kvalitet - så der er noget for enhver smag. Drøm dig væk i COZY sengesæt, som fås i størrelserne 140x200, 140x220, 200x200 og 200x220</h3>
-      </div>
-      <div class="front_display_grid">
-        <div class="test"><p>test</p></div>
-        <div class="test"><p>test</p></div>
-        <div class="test"><p>test</p></div>
-      </div>
-      <div class="info_box_large">
-        <img class="info_box_large-image" src="/images/copenhagen.webp"></img>
-        <div class="info_box_large-text">
-          <h2>SOV SOM EN DRØM</h2>
-          <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h4>
+      <articel id="detail">
+        <div class="detail_grid_cont_1">
+          <img id="pop_image" src="" alt="" />
         </div>
-      </div>
-      <div class="front_display_grid">
-        <div class="test"><p>test</p></div>
-        <div class="test"><p>test</p></div>
-        <div class="test"><p>test</p></div>
-      </div>
+        <div class="detail_grid_cont_2">
+          <div class="container1">
+          <p>Serie: <span id="category"></span></p>
+          <h1 id="pop_name"></h2>
+          <h4 id="pop_shortInfo"></h3>
+          <p><b>Om varen: </b><span id="longInfo"></span></p>
+          <p><b>Størrelse: </b><span id="origin"></span></p>
+          </div>
+          <div class="container3">
+              <h2 id="pop_price"></h3>
+            </div>  
+          </div>
+        </div> 
+      </article>
     </main>
 
     <footer>
@@ -98,5 +95,6 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="script_details.js"></script>
   </body>
 </html>
