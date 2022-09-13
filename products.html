@@ -34,19 +34,16 @@
       <h1>Se vores produkter under her</h1>
       <h3>Filtrer mellem vores varer og find præcis det produkt der passer til dig!</h3>
       <div class="nav-single">
-        <ul>
-          <li><button data-dish="alle" id="all" class="valgt alle_varer">Alle varer</button></li>
-        </ul>
-        <div class="filter-box">
-          <h4>Serier</h4>
-          <ul>
-            <li><button data-dish="alle" id="all" class="valgt">Nordic</button></li>
-            <li><button data-dish="alle" id="all" class="valgt">Organic</button></li>
-            <li><button data-dish="alle" id="all" class="valgt">Lux</button></li>
-            <li><button data-dish="alle" id="all" class="valgt">Crisp</button></li>
-          </ul>
-        </div>
-        <div class="filter-box">
+        <button data-product="all" id="all" class="valgt">Alle varer</button>
+        <p>|</p>
+        <button data-product="Nordic" id="nordic" class="valgt">Nordic</button>
+        <p>|</p>
+        <button data-product="Organic" id="organic" class="valgt">Organic</button>
+        <p>|</p>
+        <button data-product="Luxe" id="luxe" class="valgt">Luxe</button>
+        <p>|</p>
+        <button data-product="Crisp" id="crisp" class="valgt">Crisp</button>
+        <!-- <div class="filter-box">
           <h4>Størrelser</h4>
           <ul>
             <li><button data-dish="alle" id="all" class="valgt">200 x 220 cm</button></li>
@@ -60,7 +57,7 @@
             <li><button data-dish="alle" id="all" class="valgt">Bommuld</button></li>
             <li><button data-dish="alle" id="all" class="valgt">Silke</button></li>
           </ul>
-        </div>
+        </div> -->
         <!-- <button data-dish="forretter" id="starters">Forretter</button>
         <button data-dish="hovedretter" id="main_course">Hovedretter</button>
         <button data-dish="desserter" id="dessert">Desserter</button>
@@ -70,13 +67,19 @@
       <h2 class="header1">Alle varer</h2>
       <div id="main"></div>
       <template>
-        <article id="dish">
-          <h2 id="name"></h2>
+        <article id="product">
           <img id="image" class="imageMain" src="" alt="" />
-          <p>
-            <b><span id="shortInfo"></span></b>
-          </p>
-          <h3>Pris: <span id="price"></span></h3>
+          <div class="grid_1_1">
+            <div class="grid_cont">
+              <h4 id="series_name"></h4>
+              <h2 id="name"></h2>
+              <p>
+                <b><span id="size"></span></b>
+              </p>
+            </div>
+            <div class="grid_cont">
+            <h3>Pris: <span id="price"></span></h3>
+          </div>
         </article>
       </template>
     </main>
