@@ -10,7 +10,6 @@
     <title>COZY.dk</title>
   </head>
 
-  <!-- hej -->
   <body>
     <header>
       <a href="index.html">
@@ -36,10 +35,7 @@
         <h2>PIFT SOVE VÆRELSET OP</h2>
         <h3>Hos COZY har vi et bredt sortiment af forskellige sengesæt i flotte farver, mange størrelser, lækkert materiale og i god kvalitet - så der er noget for enhver smag. Drøm dig væk i COZY sengesæt, som fås i størrelserne 140x200, 140x220, 200x200 og 200x220</h3>
       </div>
-      <div class="front_display_grid">
-        <div class="test"><p>test</p></div>
-        <div class="test"><p>test</p></div>
-        <div class="test"><p>test</p></div>
+      <div id="main" class="front_display_grid">
       </div>
       <div class="info_box_large">
         <img class="info_box_large-image" src="/images/copenhagen.webp"></img>
@@ -47,11 +43,6 @@
           <h2>SOV SOM EN DRØM</h2>
           <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h4>
         </div>
-      </div>
-      <div class="front_display_grid">
-        <div class="test"><p>test</p></div>
-        <div class="test"><p>test</p></div>
-        <div class="test"><p>test</p></div>
       </div>
     </main>
 
@@ -84,7 +75,6 @@
         </div>
       </div>
       <hr />
-
       <div class="icon">
         <a href="https://www.instagram.com/emilie_hundewadt/" target="_blank">
           <img src="images/insta.png" alt="instgram" />
@@ -97,6 +87,23 @@
         <p>Copyright © 2022 Cozy</p>
       </div>
     </footer>
+    <template>
+        <article id="product">
+          <img id="image" class="imageMain" src="" alt="" />
+          <div class="grid_1_1">
+            <div class="grid_cont1">
+              <h4 id="series_name"></h4>
+              <h2 id="name"></h2>
+              <p>
+                <b><span id="size"></span></b>
+              </p>
+            </div>
+            <div class="grid_cont2">
+            <h3 id="price"></h3>
+          </div>
+        </article>
+      </template>
     <script src="script.js"></script>
+    <script src="index_script.js"></script>
   </body>
 </html>
