@@ -52,12 +52,16 @@
   color: var(--green-col);
   text-decoration: underline var(--green-col) solid 1px;
   text-underline-offset: 5px;
+  border-left: 1px solid var(--green-col);
+  border-right: 1px solid var(--green-col);
 }
 
 .valgt {
   color: var(--green-col);
   text-decoration: underline var(--green-col) solid 1px;
   text-underline-offset: 5px;
+  border-left: 1px solid var(--green-col);
+  border-right: 1px solid var(--green-col);
 }
 
 main #filter {
