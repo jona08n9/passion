@@ -22,9 +22,8 @@
 
 .nav-single {
   margin-block: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
   gap: 5%;
   width: 80%;
   margin-inline: auto;
@@ -44,6 +43,8 @@
   font-size: 1.3rem;
   margin-block: 5px;
   text-transform: uppercase;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
 
 .nav-single button:hover {
