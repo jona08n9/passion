@@ -43,8 +43,6 @@
   font-size: 1.3rem;
   margin-block: 5px;
   text-transform: uppercase;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
 }
 
 .nav-single button:hover {
@@ -70,8 +68,6 @@ main #filter {
 
 .header1 {
   font-size: 1.6rem;
-  margin-inline-start: 25px;
-  padding: 5px 10px;
   border-bottom: 1px solid #000;
 }
 
@@ -104,8 +100,9 @@ nav p {
 }
 
 #filter {
-  margin-inline-start: 5px;
+  margin-inline-start: 25px;
   margin-block-end: 35px;
+  padding-block-start: 20px;
 }
 
 #main {
@@ -148,6 +145,21 @@ article {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+@media screen and (min-width: 500px) {
+  .mobile_break {
+    display: none;
+  }
+
+  .header1 {
+    margin-inline-start: 25px;
+    padding: 5px 10px;
+  }
+
+  #filter {
+    padding-block-start: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {

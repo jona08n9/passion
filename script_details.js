@@ -3,8 +3,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 console.log(id);
 
-//Deifne dish
-let dish;
+//Deifne products
+let product;
 
 const url = `https://passion-c9e7.restdb.io/rest/sengetoej/${id}`;
 const key = "63207621fdc15b0265f17395";
@@ -24,9 +24,7 @@ async function colData() {
   showProduct();
 }
 
-document.querySelector("#close").addEventListener("click", goBack);
-
-//Show the dish
+//Show the product
 function showProduct() {
   console.log(product);
 
@@ -38,9 +36,9 @@ function showProduct() {
   document.querySelector("#longInfo").textContent = product.Long_desc;
   document.querySelector("#origin").textContent = `${product.Size} cm`;
   document.querySelector("#pop_price").textContent = `${product.Price},-`;
-
-  // Add eventlistener for going back
 }
+// Add eventlistener for going back
+document.querySelector("#close").addEventListener("click", goBack);
 
 function goBack() {
   history.back();
